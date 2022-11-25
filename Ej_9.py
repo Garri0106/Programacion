@@ -1,20 +1,20 @@
-num=100
+num = 50
 lista = []
 
-def isPrime():
-    aux = None 
+def isPrime(num):
+    div = 0
     if num >=0:
-        for i in range(2, num):
+        for i in range(1, num):
             if num % i ==0:
-                aux == False
-            else:
-                aux == True
-    elif num<0:
-        aux == None
-isPrime(num)
+                div +=1
+    if div == 1:
+        return True
+    else:
+        return False
+
 
 def getPrimeDivisors(num):
-    for i in range(0, num):
+    for i in range(1, num):
         if num%i==0 and isPrime(i)==True:
             lista.append(i)
     return lista
