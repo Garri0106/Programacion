@@ -1,17 +1,19 @@
 num = int(input("Enter a number:"))
 
 def isPrime(num):
+    div = 0
     if num >=0:
-        for i in range(2, num):
+        for i in range(1, num):
             if num % i ==0:
-                return False
-            else:
-                return True
-    if num<0:
-        return None
+                div +=1
+    if div == 1:
+        return True
+    else:
+        return False
+
 if isPrime(num) == True:
     print(f"The number {num} is prime")
 elif isPrime(num) == False:
-    print(f"The number {num} is'nt prime")
+    print(f"The number {num} isn't prime")
 else:
     print(isPrime(num))
